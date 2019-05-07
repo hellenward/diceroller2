@@ -15,18 +15,23 @@ class App extends React.Component {
     };
   }
 
-  handleRoll(sidesNumber, rollNumber) {
+  handleRoll(rolls) {
     let throwArray = [];
-    rollNumber = parseInt(rollNumber, 10);
-    sidesNumber = parseInt(sidesNumber, 10);
-    if (!isNaN(rollNumber) && (!isNaN(sidesNumber)) ) {
-      for (let i = 0; i < rollNumber; i++) {
-        let result = Math.floor(Math.random() * sidesNumber + 1);
-        throwArray.push(result);
+    Object.keys(rolls).forEach(sidesNumber => {
+      const rollNumber = parseInt(rolls[sidesNumber], 10);
+      sidesNumber = parseInt(sidesNumber, 10);
+      if (!isNaN(rollNumber) && (!isNaN(sidesNumber)) ) {
+        for (let i = 0; i < rollNumber; i++) {
+          let result = Math.floor(Math.random() * sidesNumber + 1);
+          throwArray.push({
+            sidesNumber: sidesNumber,
+            value: result
+          });
+        }
       }
-    }
+    })
     console.log(throwArray);
-    this.setState({throwArray: throwArray, sidesNumber: sidesNumber});
+    this.setState({throwArray: throwArray, sidesNumber: 0});
   }
 
   render() {
