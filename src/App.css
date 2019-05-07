@@ -31,3 +31,107 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: black;
+  font-family: Helvetica;
+}
+
+form {
+  display: inline-block;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+}
+
+h1 {
+  color: firebrick;
+}
+
+.formStyle {
+  border-color: #907163;
+  margin-right: 20px;
+}
+
+.legendText {
+  font-size: 28px;
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+  color: #907163;
+}
+
+input {
+  display: flex;
+  margin: 5px auto;
+  padding: 15px;
+  text-align: center;
+  color: #379683;
+}
+
+.formText {
+  color: #379683;
+  padding: 5px;
+}
+
+.resetButton {
+  margin: 5px;
+  width: 57px;
+
+}
+
+.submitButton {
+  margin: 5px;
+}
+
+p {
+  align-items: center;
+}
+
+.scoreTable {
+/*  visibility: hidden; */
+  border: solid 1px;
+  margin-top: 10px;
+  border-color: #907163;
+  position: relative;
+  width: 50%;
+}
+
+.newThrow {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+.totalScore {
+  font-weight: bold;
+  color: red;
+  font-size: 24px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.parentContainer {
+  display: inline-flex;
+  width: 100%;
+}
+
+.scoreThisRoll {
+  font-weight: bold;
+  color: red;
+  font-size: 24px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.newThrowGreen {
+  color: green;
+  text-align: center;
+  font-size: 18px;
+}
+
+.newThrowRed {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}
