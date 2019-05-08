@@ -9,12 +9,12 @@ class Scoretable extends React.Component {
           {this.props.throwArray.map((item, index) => {
             const sidesNumber = item.sidesNumber;
             const value = item.value;
-              if (value === 20 && sidesNumber === 20) {
-                return (<p key={index} className="newThrowGreen">You threw a 20 / 20</p>);
-              } else if (value === 1 && sidesNumber === 20) {
-                return (<p key={index} className="newThrowRed">You threw a 1 / 20</p>);
+              if (value === sidesNumber) {
+                return (<p key={index} className="newThrowGreen">You threw a {value} on a {sidesNumber}-sided die</p>);
+              } else if (value === 1) {
+                return (<p key={index} className="newThrowRed">You threw a 1 on a {sidesNumber}-sided die</p>);
               } else {
-                return (<p key={index} className="newThrow">You threw a {value} / {sidesNumber}</p>);
+                return (<p key={index} className="newThrow">You threw a {value} on a {sidesNumber}-sided die</p>);
               }
             })}
         </div>
